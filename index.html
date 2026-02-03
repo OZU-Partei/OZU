@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>OZU – Ordnung & Zukunft</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --lila: #7b5cff;
+      --gold: #d4af37;
+      --weiß: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      scroll-behavior: smooth;
+      background: linear-gradient(180deg, #f8f7ff, #ffffff);
+      color: #222;
+    }
+
+    section {
+      height: 100vh;
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: var(--lila);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: var(--lila);
+      margin-bottom: 15px;
+    }
+
+    p {
+      max-width: 700px;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .arrow {
+      margin-top: 40px;
+      font-size: 2rem;
+      cursor: pointer;
+      animation: bounce 1.5s infinite;
+      color: var(--gold);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    img {
+      max-width: 90%;
+      margin-top: 30px;
+      border-radius: 12px;
+    }
+
+    .box {
+      border: 2px solid var(--lila);
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 20px;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background: var(--lila);
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- SEITE 1 -->
+<section id="start">
+  <h1>Willkommen bei OZU</h1>
+  <p>Die Partei für Ordnung, Verantwortung und eine starke Zukunft in Deutschland.</p>
+  <div class="arrow" onclick="document.getElementById('about').scrollIntoView()">⬇</div>
+</section>
+
+<!-- SEITE 2 -->
+<section id="about">
+  <h2>Über uns</h2>
+  <p>
+    OZU wurde von einem jungen Schüler gegründet, der sich im aktuellen politischen
+    System nicht wiedergefunden hat. Statt Stillstand setzen wir auf Klarheit,
+    Ordnung und echte Perspektiven für die nächste Generation.
+  </p>
+  <div class="arrow" onclick="document.getElementById('flyer').scrollIntoView()">⬇</div>
+</section>
+
+<!-- SEITE 3 -->
+<section id="flyer">
+  <h2>Wofür wir stehen</h2>
+  <img src="flyer.png" alt="OZU Flyer">
+  <div class="arrow" onclick="document.getElementById('contact').scrollIntoView()">⬇</div>
+</section>
+
+<!-- SEITE 4 -->
+<section id="contact">
+  <h2>Mach mit</h2>
+  <p>
+    TikTok: <b>@OZU.ordnungundzukunft</b><br>
+    E-Mail: <b>OZU.Partei@web.de</b>
+  </p>
+
+  <div class="box">
+    <h3>Registrieren</h3>
+    <input type="text" placeholder="Dein Name">
+    <button>Absenden</button>
+  </div>
+</section>
+
+</body>
+</html>
